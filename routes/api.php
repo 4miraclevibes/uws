@@ -8,11 +8,11 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::post('/image', [ServiceController::class, 'storeImage']);
-Route::get('/images', [ServiceController::class, 'getImage']);
+Route::post('/service/store', [ServiceController::class, 'store']);
+Route::get('/service', [ServiceController::class, 'index']);
 
-Route::post('/document', [ServiceController::class, 'storeDocument']);
-Route::get('/documents', [ServiceController::class, 'getDocument']);
+// Route::post('/document', [ServiceController::class, 'storeDocument']);
+// Route::get('/documents', [ServiceController::class, 'getDocument']);
 
-Route::post('/vidio', [ServiceController::class, 'storeVidio']);
-Route::get('/vidios', [ServiceController::class, 'getVidio']);
+// Route::post('/vidio', [ServiceController::class, 'storeVidio']);
+// Route::get('/vidios', [ServiceController::class, 'getVidio']);
